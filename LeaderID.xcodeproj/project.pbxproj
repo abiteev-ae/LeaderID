@@ -11,6 +11,16 @@
 		3B429EF92BC19DE000BDB334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429EF82BC19DE000BDB334 /* ContentView.swift */; };
 		3B429EFB2BC19DE100BDB334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B429EFA2BC19DE100BDB334 /* Assets.xcassets */; };
 		3B429EFE2BC19DE100BDB334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B429EFD2BC19DE100BDB334 /* Preview Assets.xcassets */; };
+		3B429F112BC3175D00BDB334 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429F102BC3175D00BDB334 /* AuthView.swift */; };
+		3B429F132BC3177B00BDB334 /* EventFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429F122BC3177B00BDB334 /* EventFeedView.swift */; };
+		3B429F152BC317BE00BDB334 /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429F142BC317BE00BDB334 /* EventCardView.swift */; };
+		3B429F172BC318F100BDB334 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429F162BC318F100BDB334 /* ColorExtension.swift */; };
+		3B76A6FB2BC7185100DC29B5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3B76A6FA2BC7185100DC29B5 /* Alamofire */; };
+		3B76A7002BC724B900DC29B5 /* EventFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B76A6FF2BC724B900DC29B5 /* EventFeedViewModel.swift */; };
+		3B9726A92BC340DB004D6BD3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9726A82BC340DB004D6BD3 /* AuthViewModel.swift */; };
+		3BD73A722BC6FBC700277695 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD73A712BC6FBC700277695 /* Networking.swift */; };
+		3BD73A742BC6FF8A00277695 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD73A732BC6FF8A00277695 /* Error.swift */; };
+		3BD73A762BC7145C00277695 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD73A752BC7145C00277695 /* DI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,17 @@
 		3B429EF82BC19DE000BDB334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3B429EFA2BC19DE100BDB334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B429EFD2BC19DE100BDB334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B429F0F2BC316B300BDB334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3B429F102BC3175D00BDB334 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		3B429F122BC3177B00BDB334 /* EventFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFeedView.swift; sourceTree = "<group>"; };
+		3B429F142BC317BE00BDB334 /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
+		3B429F162BC318F100BDB334 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		3B76A6FF2BC724B900DC29B5 /* EventFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventFeedViewModel.swift; sourceTree = "<group>"; };
+		3B9726A72BC3235C004D6BD3 /* LeaderID.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeaderID.entitlements; sourceTree = "<group>"; };
+		3B9726A82BC340DB004D6BD3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		3BD73A712BC6FBC700277695 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		3BD73A732BC6FF8A00277695 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		3BD73A752BC7145C00277695 /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B76A6FB2BC7185100DC29B5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +73,15 @@
 		3B429EF52BC19DE000BDB334 /* LeaderID */ = {
 			isa = PBXGroup;
 			children = (
+				3B76A6FC2BC723E900DC29B5 /* EventFeed */,
+				3B9726A72BC3235C004D6BD3 /* LeaderID.entitlements */,
+				3B429F0F2BC316B300BDB334 /* Info.plist */,
 				3B429EF62BC19DE000BDB334 /* LeaderIDApp.swift */,
 				3B429EF82BC19DE000BDB334 /* ContentView.swift */,
 				3B429EFA2BC19DE100BDB334 /* Assets.xcassets */,
 				3B429EFC2BC19DE100BDB334 /* Preview Content */,
+				3BD73A6B2BC68FA100277695 /* Auth */,
+				3B429F162BC318F100BDB334 /* ColorExtension.swift */,
 			);
 			path = LeaderID;
 			sourceTree = "<group>";
@@ -65,6 +92,28 @@
 				3B429EFD2BC19DE100BDB334 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3B76A6FC2BC723E900DC29B5 /* EventFeed */ = {
+			isa = PBXGroup;
+			children = (
+				3B429F122BC3177B00BDB334 /* EventFeedView.swift */,
+				3B429F142BC317BE00BDB334 /* EventCardView.swift */,
+				3B76A6FF2BC724B900DC29B5 /* EventFeedViewModel.swift */,
+			);
+			path = EventFeed;
+			sourceTree = "<group>";
+		};
+		3BD73A6B2BC68FA100277695 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3B429F102BC3175D00BDB334 /* AuthView.swift */,
+				3B9726A82BC340DB004D6BD3 /* AuthViewModel.swift */,
+				3BD73A712BC6FBC700277695 /* Networking.swift */,
+				3BD73A732BC6FF8A00277695 /* Error.swift */,
+				3BD73A752BC7145C00277695 /* DI.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +132,9 @@
 			dependencies = (
 			);
 			name = LeaderID;
+			packageProductDependencies = (
+				3B76A6FA2BC7185100DC29B5 /* Alamofire */,
+			);
 			productName = LeaderID;
 			productReference = 3B429EF32BC19DE000BDB334 /* LeaderID.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +163,9 @@
 				Base,
 			);
 			mainGroup = 3B429EEA2BC19DE000BDB334;
+			packageReferences = (
+				3B76A6F92BC7185100DC29B5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3B429EF42BC19DE000BDB334 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +192,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B429F112BC3175D00BDB334 /* AuthView.swift in Sources */,
 				3B429EF92BC19DE000BDB334 /* ContentView.swift in Sources */,
 				3B429EF72BC19DE000BDB334 /* LeaderIDApp.swift in Sources */,
+				3B429F172BC318F100BDB334 /* ColorExtension.swift in Sources */,
+				3B76A7002BC724B900DC29B5 /* EventFeedViewModel.swift in Sources */,
+				3B9726A92BC340DB004D6BD3 /* AuthViewModel.swift in Sources */,
+				3B429F132BC3177B00BDB334 /* EventFeedView.swift in Sources */,
+				3BD73A722BC6FBC700277695 /* Networking.swift in Sources */,
+				3B429F152BC317BE00BDB334 /* EventCardView.swift in Sources */,
+				3BD73A762BC7145C00277695 /* DI.swift in Sources */,
+				3BD73A742BC6FF8A00277695 /* Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +333,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LeaderID/LeaderID.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LeaderID/Preview Content\"";
-				DEVELOPMENT_TEAM = RMPV57KQ7K;
+				DEVELOPMENT_TEAM = HC3NQ49D3T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeaderID/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,12 +364,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LeaderID/LeaderID.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LeaderID/Preview Content\"";
-				DEVELOPMENT_TEAM = RMPV57KQ7K;
+				DEVELOPMENT_TEAM = HC3NQ49D3T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeaderID/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,6 +412,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B76A6F92BC7185100DC29B5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B76A6FA2BC7185100DC29B5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B76A6F92BC7185100DC29B5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B429EEB2BC19DE000BDB334 /* Project object */;
 }
