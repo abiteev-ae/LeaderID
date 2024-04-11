@@ -3,7 +3,7 @@ import SwiftUI
 struct AuthView: View {
     @State private var vm: ViewModel
     
-    init(viewModel vm: ViewModel) {
+    init(_ vm: ViewModel) {
         self.vm = vm
     }
     
@@ -23,7 +23,7 @@ struct AuthView: View {
                 // TODO: По хорошему переделать навигацию через координаторы и включать следующий экран через него а не onOpenURL с NavigationLink
             case .authed(let accessTokenDecodable):
                 NavigationLink("Event Feed") {
-                    EventFeedView()
+                    EventFeedViewDI().eventFeedView(accessTokenDecodable)
                 }
             case .loading:
                 ProgressView()

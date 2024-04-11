@@ -1,27 +1,42 @@
 import SwiftUI
 
 struct EventFeedView: View {
-    // 1. Number of items will be display in row
+    typealias Event = EventsDecodable.EventDecodable
+    @State var vm: ViewModel
+    init(_ vm: ViewModel) {
+        self.vm = vm
+        vm.getUser(id: vm.dependencies.accessTokenDecodable.userId)
+    }
+    
     var columns: [GridItem] = [
-        GridItem(.flexible(minimum: 100)),
+        GridItem(.flexible()),
     ]
-
-    // 3. Get mock cards data
-    let cards: [Card] = MockStore.cards
     
     var body: some View {
-        ScrollView {
-            // 4. Populate into grid
-            LazyVGrid(columns: columns, spacing: 24) {
-                ForEach(cards) { card in
-                    CardView(title: card.title)
+        switch vm.state {
+        case .loading:
+            ProgressView()
+        case .loaded(let events):
+                ScrollView{
+                    LazyVGrid(columns: columns, spacing: Guides.spacingBetweenEvents) {
+                        ForEach(events.items) { event in
+                            NavigationLink(destination: EventView(event)) {
+                                EventView(event)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                            .padding()
+                        }
+                    }
                 }
-            }
-            .padding()
+        case .failed(let error):
+            ErrorView(error: error)
         }
+    }
+    
+    struct Guides {
+        static let spacingBetweenEvents: CGFloat = 24
     }
 }
 
-#Preview{
-    EventFeedView()
-}
+
+

@@ -1,6 +1,6 @@
 import Alamofire
 import Combine
-import SwiftUI
+import Foundation
 
 protocol AuthAPIProtocol {
     func getAccessToken(codable: AccessTokenCodable) -> AnyPublisher<AccessTokenDecodable, AFError> 

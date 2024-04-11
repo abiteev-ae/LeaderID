@@ -1,5 +1,6 @@
 import SwiftUI
-extension AuthView {
+
+extension EventFeedView {
     enum ErrorType {
         case encoding
         case decoding

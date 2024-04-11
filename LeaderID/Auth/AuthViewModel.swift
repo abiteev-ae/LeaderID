@@ -1,5 +1,5 @@
-import SwiftUI
 import Combine
+import SwiftUI
 
 extension AuthView {
     @Observable
@@ -17,7 +17,6 @@ extension AuthView {
         var code: String?
         private(set) var activateRootLink = false
         private(set) var state = State.unAuthed
-        
         // MARK: - Properties
         
         @ObservationIgnored private var subscriptions: Set<AnyCancellable> = []
@@ -33,19 +32,11 @@ extension AuthView {
         
         // MARK: - Initializers
         
-        init(networking: AuthAPIProtocol) {
+        init(_ networking: AuthAPIProtocol) {
             self.networking = networking
         }
         
         // MARK: - Methods
-        func returnToAuth() {
-            activateRootLink = true
-        }
-        
-        func startAuth() {
-            
-        }
-        
         func auth(_ code: String) {
             self.state = .loading
             networking.getAccessToken(codable: AccessTokenCodable(
@@ -57,9 +48,6 @@ extension AuthView {
                 guard let self = self else { return }
                 switch completion {
                 case .failure(let error):
-                    DispatchQueue.main.async {
-                        print(error.errorDescription)
-                    }
                     if let code = error.responseCode {
                         self.state = .failed(.backend(code))
                     }

@@ -11,9 +11,10 @@ import SwiftUI
 struct LeaderIDApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.bg)
+            ZStack {
+                Color.bg.ignoresSafeArea()
+                AuthViewDI().authView
+            }
         }
     }
 }

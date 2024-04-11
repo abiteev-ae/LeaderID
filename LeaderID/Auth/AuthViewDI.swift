@@ -3,12 +3,12 @@ import Foundation
 struct AuthViewDI {
 
     var authView: AuthView {
-        AuthView(viewModel: authViewModel)
+        AuthView(authViewModel)
     }
     private var authViewModel: AuthView.ViewModel {
-        AuthView.ViewModel(networking: networking)
+        AuthView.ViewModel(networking)
     }
-    private var networking: AuthAPI {
+    var networking: AuthAPI {
         AuthAPI()
     }
 }
