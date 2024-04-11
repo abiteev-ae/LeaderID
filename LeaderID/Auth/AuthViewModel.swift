@@ -23,8 +23,8 @@ extension AuthView {
         @ObservationIgnored private let networking: AuthAPIProtocol
         
         // OAuth properties, key and secret Key u can get from LeaderID: https://leader-id.ru/developers
-        @ObservationIgnored private let key = "c8c610ed-3e62-4e5d-9502-57cde9bdd349"
-        @ObservationIgnored private let secretKey = "dz09CLqrJirOM9Ax1jk39N33hD4Djy9K"
+        @ObservationIgnored private let key = ProcessInfo.processInfo.environment["key"]!
+        @ObservationIgnored private let secretKey = ProcessInfo.processInfo.environment["secretKey"]!
         @ObservationIgnored private let redirectURI = "klonhero.github.io/leaderid/"
         @ObservationIgnored public lazy var authorizeURL: URL = {
             return URL(string: "https://leader-id.ru/apps/authorize?client_id=\(self.key)&redirect_uri=\(redirectURI)&response_type=code")!

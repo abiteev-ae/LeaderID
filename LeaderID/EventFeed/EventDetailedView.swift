@@ -46,9 +46,9 @@ extension EventFeedView {
                 ))
                 Spacer()
             }
+            .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: Guides.cornerRadius))
             .frame(minHeight: Guides.minHeight)
-            .background(Color.white)
         }
         
         struct Guides {
