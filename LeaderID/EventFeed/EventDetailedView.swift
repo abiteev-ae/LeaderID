@@ -2,7 +2,8 @@ import Kingfisher
 import SwiftUI
 
 extension EventFeedView {
-    struct EventView: View {
+    struct EventDetailedView: View {
+        
         struct Model {
             let photo: String
             let fullName: String
@@ -25,31 +26,29 @@ extension EventFeedView {
         }
         
         var body: some View {
-            ZStack{
-                Color.white.ignoresSafeArea(.all)
-                VStack {
-                    Spacer()
-                    KFImage(URL(string: event.photo)!)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(height: Guides.imageHeight)
-                    Spacer(minLength: Guides.textsTopAndBotomInsets)
-                    VStack(alignment: .leading, spacing: 16) {
-                        Text(event.fullName)
-                            .foregroundColor(.black)
-                        Text("С \(event.dateStart) до \(event.dateEnd)")
-                            .foregroundColor(.gray)
-                    }.padding(EdgeInsets(
-                        top: Guides.textsTopAndBotomInsets,
-                        leading: Guides.textsTrailingAndLeadingInsets/2,
-                        bottom: Guides.textsTopAndBotomInsets,
-                        trailing: Guides.textsTrailingAndLeadingInsets
-                    ))
-                    Spacer()
-                }
+            VStack {
+                Spacer()
+                KFImage(URL(string: event.photo)!)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: Guides.imageHeight)
+                Spacer(minLength: Guides.textsTopAndBotomInsets)
+                VStack(alignment: .leading, spacing: 16) {
+                    Text(event.fullName)
+                        .foregroundColor(.black)
+                    Text("С \(event.dateStart) до \(event.dateEnd)")
+                        .foregroundColor(.gray)
+                }.padding(EdgeInsets(
+                    top: Guides.textsTopAndBotomInsets,
+                    leading: Guides.textsTrailingAndLeadingInsets/2,
+                    bottom: Guides.textsTopAndBotomInsets,
+                    trailing: Guides.textsTrailingAndLeadingInsets
+                ))
+                Spacer()
             }
             .clipShape(RoundedRectangle(cornerRadius: Guides.cornerRadius))
             .frame(minHeight: Guides.minHeight)
+            .background(Color.white)
         }
         
         struct Guides {

@@ -12,7 +12,7 @@ struct LeaderIDApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack {
-                Color.bg.ignoresSafeArea()
+                Color("background").ignoresSafeArea(.all)
                 AuthViewDI().authView
             }
         }

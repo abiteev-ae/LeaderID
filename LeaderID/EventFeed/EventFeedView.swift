@@ -13,23 +13,26 @@ struct EventFeedView: View {
     ]
     
     var body: some View {
-        switch vm.state {
-        case .loading:
-            ProgressView()
-        case .loaded(let events):
+        ZStack {
+            Color.bg.ignoresSafeArea(.all)  
+            switch vm.state {
+            case .loading:
+                ProgressView()
+            case .loaded(let events):
                 ScrollView{
                     LazyVGrid(columns: columns, spacing: Guides.spacingBetweenEvents) {
                         ForEach(events.items) { event in
                             NavigationLink(destination: EventView(event)) {
-                                EventView(event)
+                                EventDetailedView(event)
                             }
                             .buttonStyle(PlainButtonStyle())
                             .padding()
                         }
                     }
                 }
-        case .failed(let error):
-            ErrorView(error: error)
+            case .failed(let error):
+                ErrorView(error: error)
+            }
         }
     }
     

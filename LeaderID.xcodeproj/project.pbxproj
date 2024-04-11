@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3219352BC78C0600B66D38 /* EventDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3219342BC78C0600B66D38 /* EventDetailedView.swift */; };
 		3B429EF72BC19DE000BDB334 /* LeaderIDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B429EF62BC19DE000BDB334 /* LeaderIDApp.swift */; };
 		3B429EFB2BC19DE100BDB334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B429EFA2BC19DE100BDB334 /* Assets.xcassets */; };
 		3B429EFE2BC19DE100BDB334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B429EFD2BC19DE100BDB334 /* Preview Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B3219342BC78C0600B66D38 /* EventDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailedView.swift; sourceTree = "<group>"; };
 		3B429EF32BC19DE000BDB334 /* LeaderID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeaderID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B429EF62BC19DE000BDB334 /* LeaderIDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderIDApp.swift; sourceTree = "<group>"; };
 		3B429EFA2BC19DE100BDB334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				3B76A7012BC72E5300DC29B5 /* EventFeedAPI.swift */,
 				3B76A7032BC730D000DC29B5 /* EventFeedViewDI.swift */,
 				3B76A70A2BC74A1D00DC29B5 /* EventFeedViewError.swift */,
+				3B3219342BC78C0600B66D38 /* EventDetailedView.swift */,
 			);
 			path = EventFeed;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				3BD73A722BC6FBC700277695 /* AuthViewAPI.swift in Sources */,
 				3B429F152BC317BE00BDB334 /* EventView.swift in Sources */,
 				3B76A7042BC730D000DC29B5 /* EventFeedViewDI.swift in Sources */,
+				3B3219352BC78C0600B66D38 /* EventDetailedView.swift in Sources */,
 				3BD73A762BC7145C00277695 /* AuthViewDI.swift in Sources */,
 				3BD73A742BC6FF8A00277695 /* AuthViewError.swift in Sources */,
 				3B76A70B2BC74A1D00DC29B5 /* EventFeedViewError.swift in Sources */,
